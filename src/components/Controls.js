@@ -1,9 +1,12 @@
 import './Controls.css';
-export default function Controls({ animal, setAnimal }) {
+export default function Controls({ animal, setAnimal, setAnimals }) {
   // const animals = ['cow', 'donkey', 'goose', 'pig', 'sheep', 'spider'];
   const handleChange = (event) => {
     console.log(event.target.value);
     setAnimal(event.target.value);
+    setAnimals((currentState) => [...currentState, event.target.value]);
+    // don't do this! state must be immutable!
+    // setAnimals((currentState) => currentState.push(event.target.value));
   };
   return (
     <div className="controls">
