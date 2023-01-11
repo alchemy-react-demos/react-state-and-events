@@ -1,0 +1,19 @@
+.counter {
+  width: 100vw;
+  color: darkblue;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 3px solid darkblue;
+  margin: 20px;
+  padding-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.controls button {
+  margin: 5px;
+}
