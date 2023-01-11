@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Counter.css';
 
 export default function Counter() {
   // sets up a state variable called count
@@ -21,12 +22,14 @@ export default function Counter() {
     setCount(0);
   };
   return (
-    <>
+    <div className="counter">
       <h1>My Counter</h1>
       <h2>{count}</h2>
-      <button onClick={increment}>Add 1</button>
-      <button onClick={decrement}>Subtract 1</button>
-      <button onClick={reset}>Reset</button>
-    </>
+      <div className="controls">
+        <button onClick={increment}>Add 1</button>
+        <button onClick={decrement}>Subtract 1</button>
+        <button onClick={reset}>Reset</button>
+      </div>
+    </div>
   );
 }
