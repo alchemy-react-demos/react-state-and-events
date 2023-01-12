@@ -8,11 +8,17 @@ import { useState } from 'react';
 function App() {
   const [animal, setAnimal] = useState('pig');
   const [animals, setAnimals] = useState(['pig']);
+  const [catchphrases, setCatchphrases] = useState([]);
   return (
     <div className="App">
       <Counter />
       <div className="animal-container">
-        <Controls animal={animal} setAnimal={setAnimal} setAnimals={setAnimals} />
+        <Controls
+          setCatchphrases={setCatchphrases}
+          animal={animal}
+          setAnimal={setAnimal}
+          setAnimals={setAnimals}
+        />
         <Display animal={animal} />
       </div>
       <h2>History of Animals</h2>
